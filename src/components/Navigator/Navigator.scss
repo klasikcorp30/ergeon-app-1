@@ -1,0 +1,28 @@
+.navigator-container{
+    text-align: center;
+.navigator{
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+
+.dateInput{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.navigator__arrow{
+       font-size: 4em;
+       color: green;
+       cursor: pointer;
+       transition: .2s;
+       
+         &:hover{
+              transition: .2s;
+                transform: scale(1.2);
+         }
+
+    }
+
+
+}
+
+}

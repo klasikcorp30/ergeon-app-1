@@ -1,0 +1,98 @@
+.calendar-box{
+    min-height: 240px;
+    max-width: 700px;
+    background-color: #fff;
+    border-radius: 8px; 
+    padding: 1em; 
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+
+    .main-header{
+        text-align: center;
+        h1{
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+        h2{
+            font-weight: 400;
+        }
+    }
+.calendar-box__header{
+    display: flex;
+    p{
+        text-align: center;
+        color: green;
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        flex-basis: 100%;
+    }
+}
+.input-container{
+    margin: 0 auto;
+    display: grid;
+    row-gap: 1em;
+.custom-input{
+    min-width: 10%;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid green;
+    padding: 0.5em;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    margin-top: 3em;;
+    color: green;
+
+    
+
+}
+.button{
+    min-width: 150px;
+    height: 50px;
+    
+    border-radius: 8px;
+    border:none;
+    padding: 0.5em;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: green;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s;
+    &:hover{
+        transition: .2s;
+        transform: scale(1.2);
+    }
+
+}
+}
+.calendar-box__body{
+    min-height: 30px;
+    width: 100%;
+    border-radius: 8px;
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+   
+//horizontal scroll
+    
+    p{
+        text-align: center;
+        color: rgba(0,0,0,0.4);
+        font-size: 21px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        
+    }
+}
+
+.calendar-box__navigator{
+// flex to bottom of container
+    margin-top: 2em;
+
+}
+    
+}
