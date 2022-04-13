@@ -9,7 +9,7 @@ import "./CalContainer.scss";
 export default function CalContainer() {
   //Update context with new day
 
-  const [day, setDay] = useState(0);
+  const [day, setDay] = useState(parseInt(format(new Date(), "d")));
 
   let [daysInMonthArray] = useState(
     Array.from(Array(getDaysInMonth(new Date())).keys())
