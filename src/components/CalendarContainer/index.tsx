@@ -15,7 +15,7 @@ export default function CalContainer() {
     Array.from(Array(getDaysInMonth(new Date())).keys())
   );
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     //Use regex to only accept numbers with replace
     setDay(parseInt(e.target.value.replace(/[^0-9]/g, "")));
   };
@@ -23,8 +23,14 @@ export default function CalContainer() {
   const search = () => {
     //Update context with new day
     setDay(day);
-    let start = day - (day % 7);
+    if (day <= 0 || day > getDaysInMonth(new Date())) {
+      setDay(1);
+      return;
+    }
+    let start = day % 7 === 0 ? day - 1 : day - (day % 7);
     let end = start + 7;
+    //IF selected day is in range of start and end day then do nothing
+
     setParsedRange({ start, end });
   };
 
